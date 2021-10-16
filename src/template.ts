@@ -49,6 +49,7 @@ export const generateIndexTemplate = (resourceName: string): string => {
 
   return `library ${snakeName};
 
+export "view.dart";
 export "binding.dart";
 export "controller.dart";`;
 };

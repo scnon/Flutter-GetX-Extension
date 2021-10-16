@@ -1,6 +1,10 @@
 {
-  "name": "flutter-getx-generator",
+	"name": "flutter-getx-generator",
 	"displayName": "Flutter GetX Generator",
+	"publisher": "scnon",
+	"author": {
+		"name": "scnon"
+	},
 	"description": "a flutter getx page generator.",
 	"version": "0.0.1",
 	"engines": {
@@ -21,11 +25,13 @@
 			}
 		],
 		"menus": {
-			"explorer/context": [{
-				"when": "explorerResourceIsFolder",
-				"command": "get-extension.createPage",
-				"group": "navigation"
-			}]
+			"explorer/context": [
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "get-extension.createPage",
+					"group": "navigation"
+				}
+			]
 		}
 	},
 	"scripts": {
