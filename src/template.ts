@@ -2,7 +2,7 @@
 import * as changeCase from "change-case";
 
 export const generateControllerTemplate = (resourceName: string): string => {
-  return `part 'index.dart';
+  return `part of 'index.dart';
 
 class ${resourceName}Controller extends GetxController {
     
@@ -10,7 +10,7 @@ class ${resourceName}Controller extends GetxController {
 };
 
 export const generatePageTemplate = (resourceName: string): string => {
-  return `part 'index.dart';
+  return `part of 'index.dart';
 
 class ${resourceName}Page extends GetView<${resourceName}Controller> {
   const ${resourceName}Page({Key? key}) : super(key: key);
@@ -30,7 +30,7 @@ class ${resourceName}Page extends GetView<${resourceName}Controller> {
 };
 
 export const generateBindingTemplate = (resourceName: string): string => {
-  return `part 'index.dart';
+  return `part of 'index.dart';
     
 class ${resourceName}Binding implements Bindings {
   @override
