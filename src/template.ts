@@ -2,7 +2,7 @@
 import * as changeCase from "change-case";
 
 export const generateControllerTemplate = (resourceName: string): string => {
-  return `import 'package:get/get.dart';
+  return `part 'index.dart';
 
 class ${resourceName}Controller extends GetxController {
     
@@ -10,10 +10,7 @@ class ${resourceName}Controller extends GetxController {
 };
 
 export const generatePageTemplate = (resourceName: string): string => {
-  return `import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import 'controller.dart';
+  return `part 'index.dart';
 
 class ${resourceName}Page extends GetView<${resourceName}Controller> {
   const ${resourceName}Page({Key? key}) : super(key: key);
@@ -33,8 +30,7 @@ class ${resourceName}Page extends GetView<${resourceName}Controller> {
 };
 
 export const generateBindingTemplate = (resourceName: string): string => {
-  return `import 'package:get/get.dart';
-import 'controller.dart';
+  return `part 'index.dart';
     
 class ${resourceName}Binding implements Bindings {
   @override
@@ -49,7 +45,10 @@ export const generateIndexTemplate = (resourceName: string): string => {
 
   return `library ${snakeName};
 
-export "view.dart";
-export "binding.dart";
-export "controller.dart";`;
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+part "view.dart";
+part "binding.dart";
+part "controller.dart";`;
 };

@@ -1,9 +1,9 @@
 # Change Log
 
-All notable changes to the "flutter-getx-generator" extension will be documented in this file.
+## 0.0.3
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- Change template to part
 
-## [Unreleased]
+## 0.0.1
 
 - Initial release
