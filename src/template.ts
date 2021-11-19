@@ -2,7 +2,9 @@
 import * as changeCase from "change-case";
 
 export const generateControllerTemplate = (resourceName: string): string => {
-  return `part of 'index.dart';
+  var snakeName = changeCase.snakeCase(resourceName);
+  
+  return `part of ${snakeName};
 
 class ${resourceName}Controller extends GetxController {
     
@@ -10,7 +12,9 @@ class ${resourceName}Controller extends GetxController {
 };
 
 export const generatePageTemplate = (resourceName: string): string => {
-  return `part of 'index.dart';
+  var snakeName = changeCase.snakeCase(resourceName);
+  
+  return `part of ${snakeName};
 
 class ${resourceName}Page extends GetView<${resourceName}Controller> {
   const ${resourceName}Page({Key? key}) : super(key: key);
@@ -21,8 +25,8 @@ class ${resourceName}Page extends GetView<${resourceName}Controller> {
       appBar: AppBar(
         title: Text('${resourceName}Page'),
       ),
-      body: SafeArea(
-        child: Text('${resourceName}Controller'),
+      body: Column(
+        children: [],
       ),
     );
   }
@@ -30,7 +34,9 @@ class ${resourceName}Page extends GetView<${resourceName}Controller> {
 };
 
 export const generateBindingTemplate = (resourceName: string): string => {
-  return `part of 'index.dart';
+  var snakeName = changeCase.snakeCase(resourceName);
+  
+  return `part of ${snakeName};
     
 class ${resourceName}Binding implements Bindings {
   @override
